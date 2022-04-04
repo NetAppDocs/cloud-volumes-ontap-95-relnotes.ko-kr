@@ -1,0 +1,160 @@
+---
+sidebar: sidebar 
+permalink: reference-limitations.html 
+keywords: limitations, alarms, cloudwatch, giveback, govcloud, detaching, encryption, snapmanager, features, ha limitations, nfsv4, nfsv3, data tiering, disks, aggregates 
+summary: 알려진 제한 사항은 이 제품 릴리스에서 지원하지 않거나 올바르게 상호 운용되지 않는 플랫폼, 장치 또는 기능을 식별합니다. 이러한 제한 사항을 주의 깊게 검토하십시오. 
+---
+= 알려진 제한 사항
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+알려진 제한 사항은 이 제품 릴리스에서 지원하지 않거나 올바르게 상호 운용되지 않는 플랫폼, 장치 또는 기능을 식별합니다. 이러한 제한 사항을 주의 깊게 검토하십시오.
+
+
+
+== 일반 제한 사항
+
+AWS 및 Azure의 Cloud Volumes ONTAP에는 다음과 같은 제한 사항이 적용됩니다.
+
+
+
+=== 최대 동시 복제 작업 수
+
+인스턴스 유형 또는 시스템 유형에 상관없이 Cloud Volumes ONTAP에 대한 최대 동시 SnapMirror 또는 SnapVault 전송 수는 노드당 100개입니다.
+
+
+
+=== Cloud Manager에서 소프트웨어 업데이트를 완료해야 합니다
+
+Cloud Volumes ONTAP 업그레이드는 Cloud Manager에서 완료해야 합니다. System Manager 또는 CLI를 사용하여 Cloud Volumes ONTAP를 업그레이드해서는 안 됩니다. 이렇게 하면 시스템 안정성에 영향을 줄 수 있습니다.
+
+
+
+=== Cloud Volumes ONTAP 배포는 클라우드 공급자의 콘솔에서 수정할 수 없습니다
+
+클라우드 공급자의 콘솔에서 Cloud Volumes ONTAP 구성을 변경하면 지원되지 않는 구성이 발생합니다. Cloud Manager에서 생성 및 관리하는 Cloud Volumes ONTAP 리소스에 대한 모든 변경은 시스템 안정성과 Cloud Manager의 시스템 관리 기능에 영향을 줄 수 있습니다.
+
+
+
+=== 디스크와 애그리게이트는 Cloud Manager에서 관리해야 합니다
+
+모든 디스크와 애그리게이트는 Cloud Manager에서 직접 생성 및 삭제해야 합니다. 다른 관리 도구에서 이러한 작업을 수행해서는 안 됩니다. 이렇게 하면 시스템 안정성에 영향을 주고 향후 디스크를 추가할 수 없도록 하며 중복 클라우드 공급자 비용을 생성할 수 있습니다.
+
+
+
+=== SnapManager 라이센스 제한
+
+SnapManager 서버당 라이센스는 Cloud Volumes ONTAP에서 지원됩니다. 스토리지당 시스템(SnapManager 제품군) 라이센스는 지원되지 않습니다.
+
+
+
+=== 지원되지 않는 ONTAP 기능입니다
+
+다음 기능은 Cloud Volumes ONTAP에서 지원되지 않습니다.
+
+* 애그리게이트 레벨 인라인 중복제거
+* 애그리게이트 레벨의 백그라운드 중복제거
+* 디스크 유지보수 센터 를 참조하십시오
+* 디스크 삭제
+* 파이버 채널(FC)
+* Flash Pool을 참조하십시오
+* FlexCache
+* 무한 확장 볼륨
+* 인터페이스 그룹
+* intranode LIF 페일오버
+* MetroCluster
+* 멀티 테넌시(데이터 서비스 SVM이 하나만 지원됨)
+* RAID4, RAID-DP, RAID-TEC(RAID0 지원)
+* 서비스 프로세서
+* SnapLock 규정 준수 및 엔터프라이즈 모드(클라우드 WORM만 지원)
+* SnapMirror Synchronous
+* VLAN
+
+
+
+
+== AWS의 알려진 제한사항
+
+AWS의 Cloud Volumes ONTAP에는 다음과 같은 알려진 제한 사항이 적용됩니다.
+
+
+
+=== Flash Cache 제한
+
+C5D 및 R5D 인스턴스 유형에는 Cloud Volumes ONTAP가 _Flash Cache_로 사용하는 로컬 NVMe 스토리지가 있습니다. 다음 제한 사항을 참고하십시오.
+
+* Flash Cache의 성능 향상 기능을 활용하려면 모든 볼륨에서 압축을 해제해야 합니다.
++
+Cloud Manager에서 볼륨을 생성할 때 스토리지 효율성을 선택하지 않거나, 볼륨을 생성한 후 생성할 수 있습니다 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/GUID-8508A4CB-DB43-4D0D-97EB-859F58B29054.html["CLI를 사용하여 데이터 압축을 비활성화합니다"^].
+
+* 재부팅 후 캐시 재가기는 Cloud Volumes ONTAP에서 지원되지 않습니다.
+
+
+
+
+=== Amazon CloudWatch에서 잘못된 경보가 보고되었습니다
+
+Cloud Volumes ONTAP는 유휴 상태일 때 CPU를 릴리즈하지 않으므로 Amazon CloudWatch는 사용량이 100%로 표시되므로 EC2 인스턴스에 대해 높은 CPU 경고를 보고할 수 있습니다. 이 알람을 무시할 수 있습니다. ONTAP statistics 명령은 CPU의 실제 사용량을 표시합니다.
+
+
+
+=== Cloud Volumes ONTAP HA 쌍은 즉각적인 스토리지 반환을 지원하지 않습니다
+
+노드가 재부팅된 후 파트너는 스토리지를 반환하기 전에 데이터를 동기화해야 합니다. 데이터를 재동기화하는 데 걸리는 시간은 노드가 다운된 동안 클라이언트가 쓴 데이터의 양과 반환 시간 동안 데이터 쓰기 속도에 따라 달라집니다.
+
+
+
+=== AWS C2S 환경의 제한 사항
+
+Cloud Manager 문서의 제한 사항 보기: https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-aws-c2s.html["AWS C2S 환경에서 시작하십시오"^]
+
+
+
+=== AWS GovCloud(US) 지역의 제한 사항
+
+* AWS GovCloud(US) 지역에서 Cloud Volumes ONTAP 인스턴스를 실행하려면 Cloud Manager를 AWS GovCloud(US) 지역에 구축해야 합니다.
+* AWS GovCloud(US) 지역에 구축한 경우 Cloud Manager는 Microsoft Azure용 NetApp 프라이빗 스토리지 구성 또는 SoftLayer 구성을 위한 NetApp 프라이빗 스토리지에서 ONTAP 클러스터를 검색할 수 없습니다.
+
+
+
+
+=== EBS 볼륨을 분리 및 재연결하는 것은 지원되지 않습니다
+
+EBS 볼륨을 Cloud Volumes ONTAP 인스턴스에서 분리한 다음 다른 Cloud Volumes ONTAP 인스턴스에 다시 연결하는 것은 지원되지 않습니다. Cloud Manager를 사용하여 인스턴스 간에 데이터를 복제해야 합니다.
+
+
+
+== Microsoft Azure의 알려진 제한사항
+
+Azure의 Cloud Volumes ONTAP에는 다음과 같은 알려진 제한 사항이 적용됩니다.
+
+
+
+=== 새 배포는 지원되지 않습니다
+
+Cloud Volumes ONTAP 9.5의 새로운 배포는 더 이상 Azure에서 지원되지 않습니다. Cloud Volumes ONTAP 9.7을 구축해야 합니다.
+
+
+
+=== HA 제한 사항
+
+Microsoft Azure의 Cloud Volumes ONTAP HA 쌍에는 다음과 같은 제한이 있습니다.
+
+* 데이터 계층화는 지원되지 않습니다.
+* NFSv4는 지원되지 않습니다. NFSv3이 지원됩니다.
+* 일부 지역에서는 HA 쌍이 지원되지 않습니다.
++
+https://cloud.netapp.com/cloud-volumes-global-regions["지원되는 Azure 지역 목록을 참조하십시오"^].
+
+
+
+
+
+=== CSP 파트너는 선불 종량제(Pay-as-you-go)을 사용할 수 없습니다
+
+Microsoft 클라우드 솔루션 공급자(CSP) 파트너인 경우 CSP 파트너는 선불 종량제 구독을 사용할 수 없으므로 Cloud Volumes ONTAP Explore, Standard 또는 Premium을 배포할 수 없습니다. 라이센스를 구입하고 Cloud Volumes ONTAP BYOL을 구축해야 합니다.
