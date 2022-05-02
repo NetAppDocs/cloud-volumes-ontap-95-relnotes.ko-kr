@@ -6,6 +6,7 @@ summary: Cloud Volumes ONTAP는 AWS 및 Azure의 다양한 구성에서 사용�
 ---
 = 지원되는 구성
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

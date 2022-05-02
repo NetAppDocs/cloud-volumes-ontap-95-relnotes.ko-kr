@@ -6,6 +6,7 @@ summary: Cloud Volumes ONTAP는 안정적인 운영을 제공하기 위해 스�
 ---
 = 보관 제한
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
