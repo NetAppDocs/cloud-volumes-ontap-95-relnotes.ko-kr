@@ -398,4 +398,5 @@
   <block id="dea335c9c6f638eb584011e253ad6ca1" category="sidebar">ONTAP 클라우드</block>
   <block id="62703524dbb4d20326585184b2149d4d" category="admonition">최신 버전의 Cloud Manager에는 추가 기능과 개선 사항도 포함되어 있습니다. 를 참조하십시오<block ref="b168941a5dc7eab411ef9dc2c7a220db" category="inline-link-rx"></block> 를 참조하십시오.</block>
   <block id="33f66f5b18b24875dca7a81c8f84c5b9" category="cell">896TiB</block>
+  <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">모든 Cloud Manager 설명서</block>
 </blocks>

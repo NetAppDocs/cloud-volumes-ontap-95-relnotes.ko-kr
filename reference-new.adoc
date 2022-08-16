@@ -196,7 +196,7 @@ CLI에서 NetApp Volume Encryption을 설정해야 합니다. 그런 다음 CLI 
 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-encrypting-volumes.html["NetApp 볼륨 암호화를 설정하는 방법을 알아보십시오"^]
 
 
-NOTE: NetApp 볼륨 암호화는 Cloud Volumes ONTAP 암호화와 다른 암호화 기술이며, 애그리게이트 레벨에서 암호화된 데이터를 이제는 더 이상 사용되지 않습니다. 이러한 두 암호화 기술 간의 업그레이드는 불가능합니다. 을 참조하십시오 <<Deprecated features in AWS>> 를 참조하십시오.
+NOTE: NetApp 볼륨 암호화는 Cloud Volumes ONTAP 암호화와 다른 암호화 기술이며, 애그리게이트 레벨에서 암호화된 데이터를 이제는 더 이상 사용되지 않습니다. 이러한 두 암호화 기술 간의 업그레이드는 불가능합니다. 을 참조하십시오  features in AWS 를 참조하십시오.
 
 
 
