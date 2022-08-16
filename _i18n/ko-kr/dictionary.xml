@@ -267,9 +267,7 @@
   <block id="794df3791a8c800841516007427a2aa3" category="cell">라이센스</block>
   <block id="643a529396d04bbbe61c8daa70456163" category="cell">최대 시스템 용량(디스크 + 오브젝트 스토리지)</block>
   <block id="768560d8110ed230b7fde848941af107" category="cell">2TiB(데이터 계층화는 Explore에서 지원되지 않음)</block>
-  <block id="2f9882645b2c32820ad085240bacb763" category="section-title">HA의 경우 노드당 또는 전체 HA 쌍의 라이센스 용량 제한이 있습니까?</block>
   <block id="44007958b04e5e15a25a3ca1ee98abeb" category="paragraph">용량 제한은 전체 HA 쌍에 대한 것입니다. 노드 단위로 표시되지 않습니다. 예를 들어, Premium 라이센스를 사용하는 경우 두 노드 간에 최대 368TiB의 용량을 가질 수 있습니다.</block>
-  <block id="fc9a388cd18c69244f22554de6f0d544" category="section-title">AWS의 HA 시스템에서 미러링된 데이터는 용량 제한에 따라 계산됩니까?</block>
   <block id="8644b747d80d3144a35c2f7a3eb37c2e" category="paragraph">아니요, 그렇지 않습니다. AWS HA 쌍의 데이터는 노드 간에 동기식으로 미러링되므로 장애 발생 시 데이터를 사용할 수 있습니다. 예를 들어, 노드 A에서 8TiB 디스크를 구매하는 경우 Cloud Manager는 미러링된 데이터에 사용되는 노드 B에도 8TiB 디스크를 할당합니다. 16TiB의 용량을 프로비저닝한 경우 라이센스 제한에서 8TiB만 가능합니다.</block>
   <block id="0cdb1f70c4440ec9777490ad7091543c" category="section-title">AWS EC2 인스턴스별 용량 및 디스크 제한</block>
   <block id="55cf9e2321fbdbbee6d9396af8ae9a4f" category="paragraph">Cloud Volumes ONTAP는 EBS 볼륨을 디스크로 사용합니다. 아래의 디스크 제한은 사용자 데이터를 포함하는 디스크에만 적용됩니다. 이 제한에는 부팅 디스크 및 루트 디스크가 포함되지 않습니다.</block>
@@ -306,8 +304,6 @@
   <block id="03afdbd66e7929b125f8597834fa83a4" category="cell">63</block>
   <block id="5eea1e25ada5f639be60cd3747453706" category="admonition">일부 VM 유형의 경우 아래 나열된 최대 시스템 용량에 도달하기 위해 몇 가지 BYOL 라이센스가 필요합니다. 예를 들어, DS5_v2에서 2 PiB에 도달하려면 6개의 BYOL 라이센스가 필요합니다.</block>
   <block id="caa04f6c0c961ead7ba1a22b65f58bb8" category="cell">480TiB</block>
-  <block id="cfd3d7471481ba0d3a23470409857d68" category="cell">992TiB</block>
-  <block id="9010e525ec80d0fdea3d56191f64ce39" category="cell">2 PiB</block>
   <block id="7d77a94398a1ae91747e4416328465b2" category="cell">HA 쌍을 지원하는 MAX Data 디스크</block>
   <block id="f09d01e9299f4f1d66eff1fb0b840c5c" category="cell">DS15_v2</block>
   <block id="66d1b90f80769239ea0e95b22a8f3e04" category="admonition">일부 VM 유형의 경우 아래 나열된 최대 시스템 용량에 도달하기 위해 몇 가지 BYOL 라이센스가 필요합니다. 예를 들어, DS5_v2에서 1 PiB에 도달하려면 3개의 BYOL 라이센스가 필요합니다.</block>
@@ -389,7 +385,6 @@
   <block id="398d7dd4fa02e30dc6322ad98eff7d2b" category="paragraph">ONTAP 소프트웨어에 대해 알려진 문제는 에서 찾을 수 있습니다<block ref="13c0668cefb5d13050e1de01793dacbb" category="inline-link-rx"></block>.</block>
   <block id="86356f570acc8683cfbf184efa49892d" category="summary">이 릴리즈 노트에서는 Cloud Volumes ONTAP 9.5와 관련된 새로운 기능, 제한 사항 및 알려진 문제에 대해 설명합니다.</block>
   <block id="543ec7e9ddd2b6bc0d9506114c6dda6f" category="doc">Cloud Volumes ONTAP 9.5 릴리스 정보</block>
-  <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">모든 Cloud Manager 설명서</block>
   <block id="da38098873cb3db962a9491ab33ff93d" category="sidebar">릴리스 노트 홈</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">새로운 소식</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">시작하십시오</block>
@@ -402,4 +397,5 @@
   <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="sidebar">Cloud Volumes ONTAP</block>
   <block id="dea335c9c6f638eb584011e253ad6ca1" category="sidebar">ONTAP 클라우드</block>
   <block id="62703524dbb4d20326585184b2149d4d" category="admonition">최신 버전의 Cloud Manager에는 추가 기능과 개선 사항도 포함되어 있습니다. 를 참조하십시오<block ref="b168941a5dc7eab411ef9dc2c7a220db" category="inline-link-rx"></block> 를 참조하십시오.</block>
+  <block id="33f66f5b18b24875dca7a81c8f84c5b9" category="cell">896TiB</block>
 </blocks>
