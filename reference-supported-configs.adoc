@@ -76,7 +76,7 @@ AWS에서는 Cloud Volumes ONTAP를 단일 노드 시스템 또는 HA 쌍으로 
 참고:
 
 . 로 표시된 인스턴스 유형은 Cloud Volumes ONTAP에서 _Flash Cache_로 사용하는 로컬 NVMe 스토리지를 포함합니다. Flash Cache는 최근에 읽은 사용자 데이터와 NetApp 메타데이터의 실시간 지능형 캐싱을 통해 데이터 액세스 속도를 높입니다. 데이터베이스, 이메일, 파일 서비스를 비롯한 랜덤 읽기 집약적인 워크로드에 효과적입니다. Flash Cache의 성능 향상 기능을 활용하려면 모든 볼륨에서 압축을 해제해야 합니다. link:reference-limitations.html#flash-cache-limitations["자세한 정보"].
-. 일부 구성에서는 디스크 제한만으로 368TiB의 용량 제한에 도달하지 못합니다. 이 경우 의 용량 제한은 368TiB에 도달할 수 있습니다 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["비활성 데이터를 오브젝트 스토리지로 계층화"^]. 디스크 제한에 대한 자세한 내용은 를 참조하십시오 link:reference-storage-limits.html["보관 제한"].
+. 일부 구성에서는 디스크 제한만으로 368TiB의 용량 제한에 도달하지 못합니다. 이 경우 의 용량 제한은 368TiB에 도달할 수 있습니다 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["비활성 데이터를 오브젝트 스토리지로 계층화"^]. 디스크 제한에 대한 자세한 내용은 를 참조하십시오 link:reference-storage-limits.html["보관 제한"].
 . 데이터 계층화를 사용하는 경우 시스템의 용량 제한은 동일하게 유지됩니다. 용량 제한에는 디스크와 오브젝트 스토리지가 모두 포함됩니다.
 . 데이터 계층화는 Cloud Volumes ONTAP Standard, Premium 및 BYOL에서 지원됩니다.
 . EC2 인스턴스 유형을 선택하면 해당 인스턴스가 공유 인스턴스인지 전용 인스턴스인지 지정할 수 있습니다.

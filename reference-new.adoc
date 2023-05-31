@@ -17,7 +17,7 @@ summary: Cloud Volumes ONTAP 9.5에는 몇 가지 새로운 기능과 향상된 
 Cloud Volumes ONTAP 9.5에는 몇 가지 새로운 기능과 향상된 기능이 포함되어 있습니다.
 
 
-NOTE: 최신 버전의 Cloud Manager에는 추가 기능과 개선 사항도 포함되어 있습니다. 를 참조하십시오 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html["Cloud Manager 릴리즈 노트"^] 를 참조하십시오.
+NOTE: 최신 버전의 Cloud Manager에는 추가 기능과 개선 사항도 포함되어 있습니다. 를 참조하십시오 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Cloud Manager 릴리즈 노트"^] 를 참조하십시오.
 
 
 
@@ -64,7 +64,7 @@ Cloud Volumes ONTAP용 9.5 P4 패치 릴리스가 출시되었습니다. Cloud M
 
 Cloud Volumes ONTAP 9.5 및 Cloud Manager 3.6.4는 현재 미국에서 사용할 수 있습니다 C2S(AWS Commercial Cloud Services) 환경을 통한 IC(Intelligence Community) C2S에 HA 쌍 및 단일 노드 시스템을 구축할 수 있습니다.
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-aws-c2s.html["AWS C2S 환경에서 시작하십시오"^]
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-getting-started-aws-c2s.html["AWS C2S 환경에서 시작하십시오"^]
 
 
 
@@ -147,7 +147,7 @@ Cloud Volumes ONTAP 9.5의 GA(General Availability) 릴리스는 현재 AWS 및 
 
 Cloud Volumes ONTAP Premium 및 BYOL의 시스템 용량 제한은 이제 모든 구성(AWS 및 Azure의 단일 노드 및 HA)에서 368TB입니다.
 
-일부 구성에서는 디스크 제한만으로 368TB의 용량 제한에 도달하지 못합니다. 이 경우 의 용량 제한에 도달할 수 있습니다 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["비활성 데이터를 오브젝트 스토리지로 계층화"^]. 예를 들어, Azure의 단일 노드 시스템은 252TB의 디스크 기반 용량을 가질 수 있으며 Azure Blob 스토리지에서 최대 116TB의 비활성 데이터를 허용합니다.
+일부 구성에서는 디스크 제한만으로 368TB의 용량 제한에 도달하지 못합니다. 이 경우 의 용량 제한에 도달할 수 있습니다 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["비활성 데이터를 오브젝트 스토리지로 계층화"^]. 예를 들어, Azure의 단일 노드 시스템은 252TB의 디스크 기반 용량을 가질 수 있으며 Azure Blob 스토리지에서 최대 116TB의 비활성 데이터를 허용합니다.
 
 디스크 제한에 대한 자세한 내용은 를 참조하십시오 link:reference-storage-limits.html["보관 제한"].
 
@@ -193,7 +193,7 @@ https://www.netapp.com/us/media/ds-3899.pdf["NetApp 볼륨 암호화(NVE)"^] 는
 
 CLI에서 NetApp Volume Encryption을 설정해야 합니다. 그런 다음 CLI 또는 System Manager를 사용하여 특정 볼륨에서 암호화를 활성화할 수 있습니다. Cloud Manager는 사용자 인터페이스 및 API에서 NetApp Volume Encryption을 지원하지 않습니다.
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-encrypting-volumes.html["NetApp 볼륨 암호화를 설정하는 방법을 알아보십시오"^]
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-encrypting-volumes.html["NetApp 볼륨 암호화를 설정하는 방법을 알아보십시오"^]
 
 
 NOTE: NetApp 볼륨 암호화는 Cloud Volumes ONTAP 암호화와 다른 암호화 기술이며, 애그리게이트 레벨에서 암호화된 데이터를 이제는 더 이상 사용되지 않습니다. 이러한 두 암호화 기술 간의 업그레이드는 불가능합니다. 을 참조하십시오 <<AWS에서 더 이상 사용되지 않는 기능>> 를 참조하십시오.
@@ -208,15 +208,15 @@ NOTE: NetApp 볼륨 암호화는 Cloud Volumes ONTAP 암호화와 다른 암호�
 
 ==== Cloud Volumes ONTAP 애그리게이트 레벨 암호화는 이제 디스크의 AWS 네이티브 암호화만 지원합니다
 
-외부 키 관리자를 사용하여 유휴 상태의 애그리게이트를 사용하는 데이터는 더 이상 지원되지 않습니다. 현재 이 기능을 사용하고 있고 업그레이드하려는 경우 새 9.5 시스템을 시작한 다음 https://docs.netapp.com/us-en/cloud-manager-replication/task-replicating-data.html["데이터 복제"] 확인하십시오.
+외부 키 관리자를 사용하여 유휴 상태의 애그리게이트를 사용하는 데이터는 더 이상 지원되지 않습니다. 현재 이 기능을 사용하고 있고 업그레이드하려는 경우 새 9.5 시스템을 시작한 다음 https://docs.netapp.com/us-en/bluexp-replication/task-replicating-data.html["데이터 복제"] 확인하십시오.
 
-유휴 데이터 암호화는 다른 방법을 사용하여 계속 지원됩니다. NetApp 볼륨 암호화를 사용하거나 AWS KMS(Key Management Service)를 사용하여 데이터를 암호화할 수 있습니다. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-security.html["유휴 데이터 암호화에 대해 자세히 알아보십시오"^].
+유휴 데이터 암호화는 다른 방법을 사용하여 계속 지원됩니다. NetApp 볼륨 암호화를 사용하거나 AWS KMS(Key Management Service)를 사용하여 데이터를 암호화할 수 있습니다. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-security.html["유휴 데이터 암호화에 대해 자세히 알아보십시오"^].
 
 
 
 ==== c4.2xLarge는 더 이상 지원되지 않습니다
 
-c4.2xLarge 인스턴스 유형은 9.5 릴리즈에서 지원되지 않습니다. 현재 이 인스턴스 유형을 사용 중인 경우에는 먼저 해야 합니다 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-change-ec2-instance.html["새 인스턴스 유형으로 변경합니다"] 9.5 릴리스로 업그레이드하기 전.
+c4.2xLarge 인스턴스 유형은 9.5 릴리즈에서 지원되지 않습니다. 현재 이 인스턴스 유형을 사용 중인 경우에는 먼저 해야 합니다 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-change-ec2-instance.html["새 인스턴스 유형으로 변경합니다"] 9.5 릴리스로 업그레이드하기 전.
 
 
 
@@ -232,7 +232,7 @@ Microsoft Azure에서 Cloud Volumes ONTAP HA 쌍의 미리 보기를 사용할 �
 
 Azure의 HA 쌍을 미리보기로 확인할 수 있습니다. ng-Cloud-Volume-ONTAP-preview@netapp.com 으로 문의하여 미리 보기 라이센스를 요청할 수 있습니다.
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-ha-azure.html["Azure의 HA 쌍 에 대해 자세히 알아보십시오"^].
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha-azure.html["Azure의 HA 쌍 에 대해 자세히 알아보십시오"^].
 
 
 
@@ -256,7 +256,7 @@ https://www.netapp.com/us/media/ds-3899.pdf["NetApp 볼륨 암호화(NVE)"^] 는
 
 CLI에서 NetApp Volume Encryption을 설정해야 합니다. 그런 다음 CLI 또는 System Manager를 사용하여 특정 볼륨에서 암호화를 활성화할 수 있습니다. Cloud Manager는 현재 NetApp 볼륨 암호화를 지원하지 않습니다.
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-encrypting-volumes.html["NetApp 볼륨 암호화를 설정하는 방법을 알아보십시오"^]
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-encrypting-volumes.html["NetApp 볼륨 암호화를 설정하는 방법을 알아보십시오"^]
 
 
 

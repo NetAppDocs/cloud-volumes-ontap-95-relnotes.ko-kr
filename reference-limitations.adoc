@@ -112,7 +112,7 @@ Cloud Volumes ONTAP는 유휴 상태일 때 CPU를 릴리즈하지 않으므로 
 
 === AWS C2S 환경의 제한 사항
 
-Cloud Manager 문서의 제한 사항 보기: https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-aws-c2s.html["AWS C2S 환경에서 시작하십시오"^]
+Cloud Manager 문서의 제한 사항 보기: https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-getting-started-aws-c2s.html["AWS C2S 환경에서 시작하십시오"^]
 
 
 
