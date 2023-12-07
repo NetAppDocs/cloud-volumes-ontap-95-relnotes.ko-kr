@@ -62,28 +62,6 @@ sidebar:
     url: "/reference-limitations.html"
   - title: 법적 고지
     url: "/legal-notices.html"
-homepage:
-  tiles:
-  - title: 시작하십시오
-    links:
-    - title: 새로운 소식
-      url: reference-new.html
-  - title: 구성 및 제한
-    links:
-    - title: 지원되는 구성
-      url: reference-supported-configs.html
-    - title: 보관 제한
-      url: reference-storage-limits.html
-    - title: 제한 사항
-      url: reference-limitations.html
-  - title: 블로그 커뮤니티
-    links:
-    - title: NetApp 커뮤니티
-      url: https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS
-    - title: Cloud Central 블로그
-      url: https://cloud.netapp.com/blog
-    - title: 클라우드 웨비나
-      url: https://cloud.netapp.com/events
 product-family:
   name: BlueXP
   repo: bluexp-family
