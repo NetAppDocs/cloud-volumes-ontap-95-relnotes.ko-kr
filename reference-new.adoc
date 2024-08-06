@@ -187,7 +187,7 @@ Cloud Volumes ONTAP는 이제 M5 및 R5 제품군에서 다음과 같은 여러 
 
 === AWS에서 NetApp 볼륨 암호화 지원
 
-https://www.netapp.com/us/media/ds-3899.pdf["NetApp 볼륨 암호화(NVE)"^] 는 유휴 데이터를 한 번에 한 볼륨씩 암호화하는 소프트웨어 기반 기술입니다. 데이터, 스냅샷 복사본 및 메타데이터가 암호화됩니다. 데이터에 대한 액세스는 볼륨별로 고유한 XTS-AES-256 키를 통해 제공됩니다.
+https://www.netapp.com/pdf.html?item=/media/17070-ds-3899.pdf["NetApp 볼륨 암호화(NVE)"^] 는 유휴 데이터를 한 번에 하나의 볼륨씩 암호화하는 소프트웨어 기반 기술입니다. 데이터, 스냅샷 복사본 및 메타데이터가 암호화됩니다. 데이터에 대한 액세스는 볼륨별로 고유한 XTS-AES-256 키를 통해 제공됩니다.
 
 현재 Cloud Volumes ONTAP는 외부 키 관리 서버로 NetApp 볼륨 암호화를 지원합니다. Onboard Key Manager는 지원되지 않습니다. 에서 지원되는 주요 관리자를 찾을 수 있습니다 http://mysupport.netapp.com/matrix["NetApp 상호 운용성 매트릭스 툴"^] 주요 관리자 * 솔루션 아래.
 
@@ -250,7 +250,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha-azure.html["
 
 === Azure에서 NetApp Volume Encryption 지원
 
-https://www.netapp.com/us/media/ds-3899.pdf["NetApp 볼륨 암호화(NVE)"^] 는 유휴 데이터를 한 번에 한 볼륨씩 암호화하는 소프트웨어 기반 기술입니다. 데이터, 스냅샷 복사본 및 메타데이터가 암호화됩니다. 데이터에 대한 액세스는 볼륨별로 고유한 XTS-AES-256 키를 통해 제공됩니다.
+https://www.netapp.com/pdf.html?item=/media/17070-ds-3899.pdf["NetApp 볼륨 암호화(NVE)"^] 는 유휴 데이터를 한 번에 하나의 볼륨씩 암호화하는 소프트웨어 기반 기술입니다. 데이터, 스냅샷 복사본 및 메타데이터가 암호화됩니다. 데이터에 대한 액세스는 볼륨별로 고유한 XTS-AES-256 키를 통해 제공됩니다.
 
 현재 Cloud Volumes ONTAP는 외부 키 관리 서버로 NetApp 볼륨 암호화를 지원합니다. Onboard Key Manager는 지원되지 않습니다. 에서 지원되는 주요 관리자를 찾을 수 있습니다 http://mysupport.netapp.com/matrix["NetApp 상호 운용성 매트릭스 툴"^] 주요 관리자 * 솔루션 아래.
 
