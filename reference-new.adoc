@@ -104,7 +104,7 @@ NOTE: 재부팅 후 캐시 재가기는 Cloud Volumes ONTAP에서 지원되지 �
 
 이제 HA 쌍이 Azure의 중앙 미국 영역에서 지원됩니다.
 
-https://cloud.netapp.com/cloud-volumes-global-regions["지원되는 Azure 지역의 전체 목록을 참조하십시오"^].
+https://bluexp.netapp.com/cloud-volumes-global-regions["지원되는 Azure 지역의 전체 목록을 참조하십시오"^]..
 
 
 
@@ -133,7 +133,7 @@ GA 릴리스는 다음을 제외하고 대부분의 Azure 지역에서 사용할
 
 이러한 영역에서 유지 보수를 수행하면 Cloud Volumes ONTAP 생성이 방지되고 페일오버가 발생하지 않습니다. 유지보수를 완료하는 즉시 이러한 지역을 지원할 계획입니다.
 
-https://cloud.netapp.com/cloud-volumes-global-regions["지원되는 Azure 지역의 전체 목록을 참조하십시오"^].
+https://bluexp.netapp.com/cloud-volumes-global-regions["지원되는 Azure 지역의 전체 목록을 참조하십시오"^]..
 
 
 
